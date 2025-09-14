@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cats — Love, Tips and Gallery</title>
+  <meta name="description" content="A simple website about cats: fun facts, care tips, and a cute gallery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#E76F51;--muted:#6B7280;--bg:#FBFAF8;--card:#FFFFFF}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:var(--bg); color:#111}
+    .container{max-width:1000px;margin:32px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:12px;overflow:hidden;flex:0 0 52px}
+    .logo img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:1.25rem}
+    nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:20px;align-items:center}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .lead{color:var(--muted);margin-top:8px}
+    .cta{display:inline-block;margin-top:14px;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-top:18px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;display:block}
+
+    .sections{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:20px}
+    .tips li{margin-bottom:10px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .sections{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="brand">
+        <div class="logo card"><img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400" alt="cat logo"></div>
+        <div>
+          <h1>World of Cats</h1>
+          <div class="lead">Everything about cats: fun, care and gallery</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#tips">Tips</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2>Why do we love cats?</h2>
+        <p class="lead">Cats are independent, entertaining and often very creative in the way they get our attention. Whether you are looking for companionship or just want to watch funny videos — cats are a constant source of joy.</p>
+        <a class="cta" href="#tips">See tips</a>
+
+        <div style="margin-top:18px">
+          <h3>Quick facts</h3>
+          <ul style="margin:8px 0 0 16px;color:var(--muted)">
+            <li>Cats can sleep up to 16 hours a day.</li>
+            <li>Their hearing and vision are extremely sharp — especially at dusk.</li>
+            <li>Cats use their whiskers to measure spaces and objects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Name ideas</h3>
+        <p class="lead">Looking for a name? Here are some suggestions: Luna, Mickey, Puffy, Simba, Dawn.</p>
+        <div style="margin-top:12px">
+          <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=600" alt="cute cat" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+        </div>
+      </aside>
+    </section>
+
+    <section class="sections">
+      <div class="card" id="about">
+        <h2>About cats</h2>
+        <p class="lead">Cats (Felis catus) are small carnivorous mammals that have been living with humans for thousands of years. Adopting a cat brings joy but also responsibility — proper care, regular veterinary check-ups and enough stimulation are essential.</p>
+        <h3 style="margin-top:12px">Health</h3>
+        <p class="lead">Pay attention to nutrition, a clean litter box and regular vaccinations. If you notice a change in appetite or behavior — a visit to the vet is recommended.</p>
+      </div>
+
+      <aside class="card" id="tips">
+        <h3>Quick tips</h3>
+        <ul class="tips">
+          <li>Use high-quality, balanced food appropriate for age.</li>
+          <li>Play with your cat at least 10–20 minutes a day to encourage mental and physical activity.</li>
+          <li>Provide a scratching post to prevent furniture damage.</li>
+          <li>Clean the litter box regularly — cats appreciate cleanliness.</li>
+          <li>Monitor the condition of teeth and gums — oral health is important.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="card" id="gallery" style="margin-top:18px">
+      <h2>Gallery</h2>
+      <p class="lead">Click on the images to view them in full size.</p>
+      <div class="gallery">
+        <a href="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=1200" target="_blank"><img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=400" alt="cat 1"></a>
+        <a href="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=1200" target="_blank"><img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400" alt="cat 2"></a>
+        <a href="https://images.unsplash.com/photo-1513245543132-31f507417b26?w=1200" target="_blank"><img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?w=400" alt="cat 3"></a>
+        <a href="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=1200" target="_blank"><img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400" alt="cat 4"></a>
+        <a href="https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=1200" target="_blank"><img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=400" alt="cat 5"></a>
+        <a href="https://images.unsplash.com/photo-1507149833265-60c372daea22?w=1200" target="_blank"><img src="https://images.unsplash.com/photo-1507149833265-60c372daea22?w=400" alt="cat 6"></a>
+      </div>
+    </section>
+
+    <footer>
+      <p>Created: Your simple cat website — customize it as you like.</p>
+    </footer>
+  </main>
+</body>
+</html>
